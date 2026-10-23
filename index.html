@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Star News Tonight</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Montserrat:ital,wght@0,500;0,600;0,700;1,600;1,700;1,800;1,900&display=swap">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div id="wrap">
+  <div id="stage" data-scene="bn">
+    <canvas id="bg"></canvas>
+
+    <section class="studio" aria-label="Studio">
+      <div class="vframe">
+        <video id="v1" src="videos/v1.mp4" muted loop playsinline preload="auto"></video>
+        <video id="v2" src="videos/v2.mp4" muted loop playsinline preload="auto"></video>
+        <video id="v3" src="videos/v3.mp4" muted loop playsinline preload="auto"></video>
+        <video id="v4" src="videos/v4.mp4" muted loop playsinline preload="auto"></video>
+        <video id="v5" src="videos/v5.mp4" muted loop playsinline preload="auto"></video>
+        <div class="chip"><i></i>Live &middot; Lima, Peru</div>
+      </div>
+      <div class="headline anim" id="hlBar"><span class="hl" id="hl">Star News Tonight</span></div>
+      <div class="sub anim" id="subBar"><span id="sub">A Surprising Night at the Music Festival</span></div>
+
+      <div class="side">
+        <video id="s1" src="videos/v1.mp4" muted loop playsinline preload="auto"></video>
+        <video id="s2" src="videos/v2.mp4" muted loop playsinline preload="auto"></video>
+        <video id="s3" src="videos/v3.mp4" muted loop playsinline preload="auto"></video>
+        <video id="s4" src="videos/v4.mp4" muted loop playsinline preload="auto"></video>
+        <video id="s5" src="videos/v5.mp4" muted loop playsinline preload="auto"></video>
+      </div>
+      <div class="nameplate">Music Festival</div>
+      <div class="roleplate" id="pRole">Lima &middot; Peru</div>
+      <div class="live">LIVE</div>
+      <div class="prog" id="prog"></div>
+
+      <div class="ticker">
+        <div class="tk-badge">STAR NEWS</div>
+        <div class="tk-view"><div class="tk-track" id="tk"></div></div>
+        <div class="tk-clock" id="clock">LIMA</div>
+      </div>
+    </section>
+
+    <section class="bn" id="bn" aria-hidden="true">
+      <div class="livetag"><i></i>Live</div>
+      <div class="bar b1"></div>
+      <div class="title" id="bnTitle">Breaking News</div>
+      <div class="bar b2"></div>
+      <div class="tag" id="bnTag">Star News Tonight</div>
+      <div class="tri"></div>
+      <div class="flash"></div>
+    </section>
+
+    <div class="wipe" id="wipe"><i></i><i></i><i></i></div>
+  </div>
+
+  <div class="ov" id="startOv">
+    <div class="eyebrow">Star News &middot; Lima</div>
+    <h1>Star News<br>Tonight</h1>
+    <p>A surprising night at the music festival. Turn your sound on for the news jingle.</p>
+    <div class="btns">
+      <button class="btn" id="goVoice" type="button">Start broadcast</button>
+    </div>
+  </div>
+  <div class="ov endcard" id="endOv" hidden>
+    <div class="btns"><button class="btn" id="again" type="button">Watch again</button></div>
+  </div>
+</div>
+
+
+<div class="controls">
+  <button class="ctl" id="snd" type="button" aria-pressed="true">
+    <svg viewBox="0 0 24 24" id="sndIcon"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+    <span id="sndTxt">Sound on</span>
+  </button>
+  <button class="ctl" id="restart" type="button"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Restart</button>
+  <button class="ctl" id="fs" type="button"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>Full screen</button>
+</div>
+
+
+<audio id="music" src="audio/s1.mp3" loop preload="auto"></audio>
+<script src="script.js"></script>
+
+</body>
+</html>
